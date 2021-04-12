@@ -5,6 +5,7 @@ import "./index.css";
 import Home from "./pages";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import Quotes from "./pages/quotes";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />
+        <Route path="/quotes" exact component={Quotes} />
       </Switch>
       <Footer />
     </>

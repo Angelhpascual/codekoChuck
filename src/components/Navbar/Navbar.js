@@ -25,17 +25,17 @@ const Navbar = () => {
           />
         </svg>
       </div>
-      <div className="pr-8 md:block hidden">
-        <Link className="p-4" to="/">
+      <div className="pr-8 md:block hidden ">
+        <Link className="p-4 hover:underline" to="/">
           Home
         </Link>
-        <Link className="p-4" to="/quotes">
+        <Link className="p-4 hover:underline" to="/quotes">
           Quotes
         </Link>
-        <Link className="p-4" to="/about">
+        <Link className="p-4 hover:underline" to="/about">
           About
         </Link>
-        <Link className="p-4" to="/contact">
+        <Link className="p-4 hover:underline" to="/contact">
           Contact
         </Link>
       </div>

@@ -6,7 +6,7 @@ const Contact = () => {
       <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
         <div className="flex justify-center md:justify-end -mt-16">
           <img
-            className="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
+            className="w-20 h-20 object-cover rounded-full border-2 border-yellow-500"
             src="https://avatars.githubusercontent.com/u/15203307?v=4"
             alt="Me"
           />
@@ -22,7 +22,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
             href="https://github.com/Angelhpascual/codekoChuck"
-            className="text-xl font-medium text-indigo-500"
+            className="text-xl font-medium text-yellow-500"
           >
             Angelhpascual
           </a>
