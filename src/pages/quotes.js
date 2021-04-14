@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Axios from "axios";
+import ChuckJokeCard from "../components/ChuckJokeCard/ChuckJokeCard";
 
 const Quotes = () => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
-  const [quotes, setQuotes] = useState([]);
   const [categoryQuote, setCategoryQuote] = useState([]);
 
   useEffect(() => {
@@ -12,20 +13,32 @@ const Quotes = () => {
     axios
       .get("https://api.chucknorris.io/jokes/categories")
       .then((response) => {
-        const { data } = response;
-        setCategories(data);
+        setCategories(response.data);
         setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
       });
-  }, []);
+  }, [setCategories]);
 
-  const handleClick = (category) => {
+  const getJokeCategory = (category) => {
     axios
       .get(`https://api.chucknorris.io/jokes/random?category=${category}`)
       .then((response) => {
-        const { data } = response;
-        console.log(data.value);
-        setCategoryQuote([data.value, ...categoryQuote]);
+        console.log(response.data);
+        setCategoryQuote([response.data, ...categoryQuote]);
+        console.log(categoryQuote.id);
+      })
+      .catch((error) => {
+        console.error(error);
       });
+  };
+
+  const handleDelete = (key) => {
+    console.log(categoryQuote);
+    const removeFacts = categoryQuote.filter((joke) => joke.id !== key);
+    console.log(removeFacts);
+    setCategoryQuote(removeFacts);
   };
   return (
     <div className=" bg-yellow-500">
@@ -45,10 +58,10 @@ const Quotes = () => {
                 <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-yellow-900"></div>
               </div>
             ) : (
-              categories.map((category) => (
+              categories.map((category, index) => (
                 <button
-                  onClick={() => handleClick(category)}
-                  key={category}
+                  key={index}
+                  onClick={() => getJokeCategory(category)}
                   value={category}
                   className="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-3 rounded uppercase"
                 >
@@ -58,35 +71,21 @@ const Quotes = () => {
             )}
           </div>
         </div>
-        <div className="bg-yellow-600 rounded-lg h-auto flex flex-col text-2xl p-12 mb-20 font-mono overflow-auto divide-y divide-yellow-800">
-          {categoryQuote.length === 0 ? (
-            <h1 className="text-center">
-              Click one category to show a Chuck's joke
-            </h1>
-          ) : (
+        <div className="bg-yellow-600 rounded-lg h-auto flex flex-col items-center text-2xl p-12 mb-20 font-mono overflow-auto ">
+          {categoryQuote.length > 0 ? (
             categoryQuote.map((joke, index) => (
-              <ul key={index}>
-                <li className=" mt-5 flex justify-between r">
-                  <q>{joke}</q>
-                  <button className="flex items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </button>
-                </li>
-              </ul>
+              <ChuckJokeCard
+                key={index}
+                category={joke.categories[0]}
+                joke={joke.value}
+                handleDelete={() => handleDelete(joke.id)}
+              />
             ))
+          ) : (
+            <div className="text-center">
+              Click one <span className="font-bold underline">category</span> to
+              show a Chuck's joke
+            </div>
           )}
         </div>
       </div>
