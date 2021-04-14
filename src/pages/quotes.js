@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ChuckJokeCard from "../components/ChuckJokeCard/ChuckJokeCard";
 import chuckCartoon from "../assets/images/chucknorriscartoon.png";
+
 const Quotes = () => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
@@ -86,7 +87,7 @@ const Quotes = () => {
             )}
           </div>
         </div>
-        <div className="bg-yellow-600 rounded-lg h-auto flex flex-col items-center text-2xl p-12 mb-20 font-mono overflow-auto ">
+        <div className="bg-yellow-600 rounded-lg h-auto flex flex-col items-center text-2xl p-12 mb-20 font-mono overflow-hidden ">
           {categoryQuote.length > 0 ? (
             categoryQuote.map((joke, index) => (
               <ChuckJokeCard
