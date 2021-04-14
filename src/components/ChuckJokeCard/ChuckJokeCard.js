@@ -16,9 +16,9 @@ const ChuckJokeCard = ({ category, joke, handleDelete }) => {
         </h2>
         <q className="mt-2 text-gray-600">{joke}</q>
       </div>
-      <div className="flex  items-center justify-between mt-2">
+      <div className="flex justify-between mt-4">
         <div className="text-xl font-bold text-yellow-100">Chuck Norris</div>
-        <div className="flex justify-end">
+        <div className="flex justify-end ">
           <button onClick={() => handleDelete(joke.id)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

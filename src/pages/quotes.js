@@ -6,7 +6,9 @@ const Quotes = () => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
   const [categoryQuote, setCategoryQuote] = useState([]);
-
+  /**
+   * *Getting the categories
+   */
   useEffect(() => {
     setLoading(true);
     axios
@@ -20,6 +22,11 @@ const Quotes = () => {
       });
   }, [setCategories]);
 
+  /**
+   *
+   * *Function for getting a joke from a category
+   * *params : category
+   */
   const getJokeCategory = (category) => {
     axios
       .get(`https://api.chucknorris.io/jokes/random?category=${category}`)
@@ -31,10 +38,11 @@ const Quotes = () => {
       });
   };
 
-  const handleDelete = (key) => {
-    console.log(categoryQuote);
-    const removeFacts = categoryQuote.filter((joke) => joke.id !== key);
-    console.log(removeFacts);
+  /**
+   * *Delete Function
+   */
+  const handleDelete = (id) => {
+    const removeFacts = categoryQuote.filter((joke) => joke.id !== id);
     setCategoryQuote(removeFacts);
   };
   return (
