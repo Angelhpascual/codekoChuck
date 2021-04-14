@@ -18,14 +18,13 @@ const Quotes = () => {
       });
   }, []);
 
-  const getJokeCategory = (category) => {
+  const handleClick = (category) => {
     axios
-      .get(
-        `https://api.chucknorris.io/jokes/random?category=${category.target.value}`
-      )
-      .then((response) => setCategoryQuote(response.data))
-      .catch((error) => {
-        console.error(error);
+      .get(`https://api.chucknorris.io/jokes/random?category=${category}`)
+      .then((response) => {
+        const { data } = response;
+        console.log(data.value);
+        setCategoryQuote([data.value, ...categoryQuote]);
       });
   };
   return (
@@ -48,9 +47,10 @@ const Quotes = () => {
             ) : (
               categories.map((category) => (
                 <button
+                  onClick={() => handleClick(category)}
                   key={category}
                   value={category}
-                  className="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-2 rounded uppercase"
+                  className="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-3 rounded uppercase"
                 >
                   {category}
                 </button>
@@ -58,8 +58,36 @@ const Quotes = () => {
             )}
           </div>
         </div>
-        <div className="bg-yellow-600 h-96 flex justify-center items-center text-justify text-2xl p-12">
-          <q>{quotes.value}</q>
+        <div className="bg-yellow-600 rounded-lg h-auto flex flex-col text-2xl p-12 mb-20 font-mono overflow-auto divide-y divide-yellow-800">
+          {categoryQuote.length === 0 ? (
+            <h1 className="text-center">
+              Click one category to show a Chuck's joke
+            </h1>
+          ) : (
+            categoryQuote.map((joke, index) => (
+              <ul key={index}>
+                <li className=" mt-5 flex justify-between r">
+                  <q>{joke}</q>
+                  <button className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            ))
+          )}
         </div>
       </div>
     </div>
