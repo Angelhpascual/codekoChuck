@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ChuckJokeCard from "../components/ChuckJokeCard/ChuckJokeCard";
 import chuckCartoon from "../assets/images/chucknorriscartoon.png";
+import animate from "animate.css";
 
 const Quotes = () => {
   const [loading, setLoading] = useState(false);
@@ -64,7 +65,11 @@ const Quotes = () => {
     <div className=" bg-yellow-500">
       <h1 className="lg:text-7xl md:text-5xl sm:text-3xl text-center pt-16 flex flex-col items-center font-mono underline">
         Chuck Norris Quotes
-        <img src={chuckCartoon} alt="chuckIcon" className="h-44 w-44 mt-8" />
+        <img
+          src={chuckCartoon}
+          alt="chuckIcon"
+          className="h-44 w-44 mt-8 animate__animated animate__bounceIn animate__slower "
+        />
       </h1>
       <div className="grid grid-cols-1 gap-4 container mx-auto pt-12">
         <div className="bg-yellow-600 rounded-xl text-center">
