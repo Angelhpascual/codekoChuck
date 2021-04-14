@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Axios from "axios";
 import ChuckJokeCard from "../components/ChuckJokeCard/ChuckJokeCard";
-
+import chuckCartoon from "../assets/images/chucknorriscartoon.png";
 const Quotes = () => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
@@ -25,9 +24,7 @@ const Quotes = () => {
     axios
       .get(`https://api.chucknorris.io/jokes/random?category=${category}`)
       .then((response) => {
-        console.log(response.data);
         setCategoryQuote([response.data, ...categoryQuote]);
-        console.log(categoryQuote.id);
       })
       .catch((error) => {
         console.error(error);
@@ -42,13 +39,9 @@ const Quotes = () => {
   };
   return (
     <div className=" bg-yellow-500">
-      <h1 className="text-7xl text-center pt-16 flex flex-col items-center font-mono underline">
+      <h1 className="lg:text-7xl md:text-5xl sm:text-3xl text-center pt-16 flex flex-col items-center font-mono underline">
         Chuck Norris Quotes
-        <img
-          src="https://img.icons8.com/plasticine/452/chuck-norris.png"
-          alt="chuckIcon"
-          className="h-44 w-44 mt-8"
-        />
+        <img src={chuckCartoon} alt="chuckIcon" className="h-44 w-44 mt-8" />
       </h1>
       <div className="grid grid-cols-1 gap-4 container mx-auto pt-12">
         <div className="bg-yellow-600  text-center">
@@ -63,7 +56,7 @@ const Quotes = () => {
                   key={index}
                   onClick={() => getJokeCategory(category)}
                   value={category}
-                  className="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-3 rounded uppercase"
+                  className="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-3 text-xs sm:text-xl rounded uppercase"
                 >
                   {category}
                 </button>
@@ -83,8 +76,8 @@ const Quotes = () => {
             ))
           ) : (
             <div className="text-center">
-              Click one <span className="font-bold underline">category</span> to
-              show a Chuck's joke
+              Click one <span className="font-bold">category</span> to show a
+              Chuck's joke
             </div>
           )}
         </div>
