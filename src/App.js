@@ -1,10 +1,24 @@
+import { Switch, Route } from "react-router";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 import "./index.css";
+import Home from "./pages";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import Quotes from "./pages/quotes";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-red-500">Hello Chuck</h1>
-    </div>
+    <>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/quotes" exact component={Quotes} />
+      </Switch>
+      <Footer />
+    </>
   );
 }
 
