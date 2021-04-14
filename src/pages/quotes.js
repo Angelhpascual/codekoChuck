@@ -23,6 +23,20 @@ const Quotes = () => {
   }, [setCategories]);
 
   /**
+   * *Set LocalStorage
+   */
+  useEffect(() => {
+    setCategoryQuote(JSON.parse(localStorage.getItem("jokes") || []));
+  }, []);
+
+  /**
+   * *Get LocalStorage
+   */
+  useEffect(() => {
+    localStorage.setItem("jokes", JSON.stringify(categoryQuote));
+  }, [categoryQuote]);
+
+  /**
    *
    * *Function for getting a joke from a category
    * *params : category
