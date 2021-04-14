@@ -30,7 +30,7 @@ const Quotes = () => {
   }, []);
 
   /**
-   * *Get LocalStorage
+   * *Get LocalStoragecod
    */
   useEffect(() => {
     localStorage.setItem("jokes", JSON.stringify(categoryQuote));
@@ -66,7 +66,7 @@ const Quotes = () => {
         <img src={chuckCartoon} alt="chuckIcon" className="h-44 w-44 mt-8" />
       </h1>
       <div className="grid grid-cols-1 gap-4 container mx-auto pt-12">
-        <div className="bg-yellow-600  text-center">
+        <div className="bg-yellow-600 rounded-xl text-center">
           <div className="grid grid-cols-4 gap-4 p-4">
             {loading ? (
               <div className="fixed top-0 right-0 h-screen w-screen z-50 flex justify-center items-center bg-gray-500 bg-opacity-50">
