@@ -2,9 +2,13 @@
 
 # Chuck Norris Web :rocket:
 
-Chuck Norris web it's a small project that has been built with React, Tailwind, Axios, Animation.css, HeroIcons for Codeko.
+Chuck Norris is a web project for a technical test by codeko. 
 
-APP Preview: [APP hosted by Vercel](https://codeko-chuck-gijq5ttfg-angelhpascual.vercel.app/)
+# Libraries
+
+I have been using libraries like npm, tailwind, axios, react-router-dom, etc... 
+
+APP Preview: CodekoChuck](https://codeko-chuck-gijq5ttfg-angelhpascual.vercel.app/)
 
 ## Installation
 
