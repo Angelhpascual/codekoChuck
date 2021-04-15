@@ -1,5 +1,6 @@
 import React from "react";
 import animate from "animate.css";
+
 const About = () => {
   return (
     <div className="bg-yellow-500">
@@ -135,9 +136,7 @@ const About = () => {
               plays a sheriff who must stop a psychopath who goes on a rampage
               after being granted near-indestructibility in a medical
               experiment. Shortly afterward MGM gave him a three-movie deal and
-              that same year, they released Forced Vengeance (1982). Norris was
-              unhappy with the direction they wanted to take with him, hence the
-              contract was canceled.
+              that same year, they released Forced Vengeance (1982).
             </p>
             <p class="text-left mt-5 px-10 ">
               In 1983, Norris made Lone Wolf McQuade with Orion Pictures. He
