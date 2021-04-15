@@ -56,10 +56,11 @@ const Quotes = () => {
 
   /**
    * *Delete Function
+   * *params: categoryQuote
    */
   const handleDelete = (id) => {
-    const removeFacts = categoryQuote.filter((joke) => joke.id !== id);
-    setCategoryQuote(removeFacts);
+    const newJokes = categoryQuote.filter((joke) => joke.id !== id);
+    setCategoryQuote(newJokes);
   };
   return (
     <div className=" bg-yellow-500">
@@ -84,7 +85,7 @@ const Quotes = () => {
                   key={index}
                   onClick={() => getJokeCategory(category)}
                   value={category}
-                  className="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-3 text-xs sm:text-xl rounded uppercase"
+                  className="bg-yellow-300 hover:bg-yellow-400 text-yellow-800 font-bold py-3 text-xs sm:text-xl rounded uppercase"
                 >
                   {category}
                 </button>
