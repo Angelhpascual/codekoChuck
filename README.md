@@ -8,7 +8,7 @@ Chuck Norris is a web project for a technical test by codeko.
 
 I have been using libraries like npm, tailwind, axios, react-router-dom, etc... 
 
-APP Preview: CodekoChuck](https://codeko-chuck-gijq5ttfg-angelhpascual.vercel.app/)
+Deploy: [CodekoChuck](https://codeko-chuck-gijq5ttfg-angelhpascual.vercel.app/)
 
 ## Installation
 
