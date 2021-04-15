@@ -27,15 +27,15 @@ const Quotes = () => {
    * *Set LocalStorage[]
    */
   useEffect(() => {
-    setCategoryQuote(JSON.parse(localStorage.getItem("jokes") || []));
-  }, []);
+    localStorage.setItem("jokes", JSON.stringify(categoryQuote));
+  }, [categoryQuote]);
 
   /**
    * *Get LocalStorage[]
    */
   useEffect(() => {
-    localStorage.setItem("jokes", JSON.stringify(categoryQuote));
-  }, [categoryQuote]);
+    setCategoryQuote(JSON.parse(localStorage.getItem("jokes")));
+  }, []);
 
   /**
    *
