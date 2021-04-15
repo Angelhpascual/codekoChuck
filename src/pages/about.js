@@ -2,7 +2,6 @@ import React from "react";
 import chuckSmile from "../assets/images/smile.jpg";
 import chuckEEUU from "../assets/images/EEUU.jpeg";
 import chuckBad from "../assets/images/badass.jpg";
-import animate from "animate.css";
 
 const About = () => {
   return (

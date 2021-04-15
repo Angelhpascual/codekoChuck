@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ChuckJokeCard from "../components/ChuckJokeCard/ChuckJokeCard";
 import chuckCartoon from "../assets/images/chucknorriscartoon.png";
-import animate from "animate.css";
 
 const Quotes = () => {
   const [loading, setLoading] = useState(false);
