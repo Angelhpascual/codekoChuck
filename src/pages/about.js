@@ -1,20 +1,27 @@
 import React from "react";
-import chuckSmile from "../assets/images/smile.jpg";
+import chuckWatching from "../assets/images/chuchwatching.jpeg";
 import chuckEEUU from "../assets/images/EEUU.jpeg";
 import chuckBad from "../assets/images/badass.jpg";
-
+import animate from "animate.css";
 const About = () => {
   return (
-    <div className="bg-yellow-500 pb-20 py-20">
-      <div className="container mx-auto grid grid-cols-3  gap-4 ">
-        <div className="animate__animated animate__bounceInLeft ">
-          <img src={chuckSmile} alt="Chuck Smile :)" className="w-full" />
+    <div className="bg-yellow-500 pb-20 py-20 ">
+      <div className="container mx-auto  grid lg:grid-cols-3 sm:grid-cols-1 gap-4 ">
+        <div
+          style={animate}
+          className="animate__animated  animate__bounceInLeft flex"
+        >
+          <img
+            src={chuckWatching}
+            alt="Chuck Smile :)"
+            className="  object-cover "
+          />
         </div>
-        <div className="rounded-xl flex flex-col items-center col-span-2 bg-yellow-600 animate__animated animate__bounceInRight px-10">
+        <div className="rounded-xl pb-10 flex flex-col items-center col-span-2 bg-yellow-600 animate__animated animate__bounceInRight px-10">
           <h1 className="font-light text-7xl p-8  uppercase underline">
             Early Life
           </h1>
-          <p className="py-9 text-justify font-mono ">
+          <p className="pb-10 text-justify font-mono ">
             Norris was born in Ryan, Oklahoma on March 10, 1940 to Wilma (née
             Scarberry) and Ray Dee Norris, who was a World War II Army soldier,a
             mechanic, bus driver, and truck driver. Norris has stated that he
@@ -96,7 +103,7 @@ const About = () => {
         <div className="  animate__animated animate__bounceInLeft animate__fast">
           <img src={chuckBad} className=" object-cover  h-full " alt="" />
         </div>
-        <div className=" col-span-2 bg-yellow-600 rounded-xl flex flex-col animate__animated animate__bounceInRight">
+        <div className="  items-center col-span-2 bg-yellow-600 rounded-xl flex flex-col animate__animated animate__bounceInRight">
           <h1 className="font-light text-7xl p-10 uppercase underline mb-8">
             Philanthropy
           </h1>
