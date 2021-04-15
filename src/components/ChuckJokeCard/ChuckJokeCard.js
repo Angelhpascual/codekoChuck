@@ -1,6 +1,5 @@
 import React from "react";
 import chuckImg from "../../assets/images/chuck.jpg";
-import animate from "animate.css";
 
 const ChuckJokeCard = ({ category, joke, handleDelete }) => {
   return (

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ChuckJokeCard from "../components/ChuckJokeCard/ChuckJokeCard";
 import chuckCartoon from "../assets/images/chucknorriscartoon.png";
-import animate from "animate.css";
 
 const Quotes = () => {
   const [loading, setLoading] = useState(false);
@@ -25,14 +24,14 @@ const Quotes = () => {
   }, [setCategories]);
 
   /**
-   * *Set LocalStorage
+   * *Set LocalStorage[]
    */
   useEffect(() => {
     setCategoryQuote(JSON.parse(localStorage.getItem("jokes") || []));
   }, []);
 
   /**
-   * *Get LocalStoragecod
+   * *Get LocalStorage[]
    */
   useEffect(() => {
     localStorage.setItem("jokes", JSON.stringify(categoryQuote));
@@ -56,7 +55,7 @@ const Quotes = () => {
 
   /**
    * *Delete Function
-   * *params: categoryQuote
+   * *params: categoryQuote.id
    */
   const handleDelete = (id) => {
     const newJokes = categoryQuote.filter((joke) => joke.id !== id);
