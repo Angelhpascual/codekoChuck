@@ -114,7 +114,7 @@ const About = () => {
               className="sm:h-full w-full object-cover rounded-xl"
             />
           </div>
-          <div class="bg-yellow-400 animate__animated animate__bounceInLeft ">
+          <div class=" animate__animated animate__bounceInLeft ">
             <img
               src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/03/10/5fa908e2329b4.jpeg"
               alt=""
