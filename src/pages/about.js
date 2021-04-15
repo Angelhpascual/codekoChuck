@@ -16,8 +16,8 @@ const About = () => {
             />
           </div>
           <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight rounded-xl ">
-            <h1 className="text-3xl  text-center underline mb-6">Early Life</h1>
-            <p class="text-center">
+            <h1 className="text-6xl text-center underline pt-8">Early Life</h1>
+            <p class="text-left px-10 pt-10">
               Norris would go on to star in a streak of bankable
               independently-made action and martial arts films, with A Force of
               One (1979), The Octagon (1980), and An Eye for an Eye (1981). This
@@ -33,17 +33,9 @@ const About = () => {
               the Cannon films, Norris made Code of Silence (1985), which was
               received as one of his best films. In the 1990s, he played the
               title role in the long running television series Walker, Texas
-              Ranger from 1993 until 2001. Until 2006, Norris continued taking
-              lead roles in action movies, including Delta Force 2 (1990), The
-              Hitman (1991), Sidekicks (1992), Forest Warrior (1996), The
-              President's Man and its sequel (2002). Norris made his last film
-              appearance to date in Sylvester Stallone's The Expendables 2
-              (2012). Throughout his film and TV career Norris diversified from
-              his regular endeavors. He is a noted writer, having penned books
-              on martial arts, exercise, philosophy, politics, Christianity,
-              western novels, and biography.
+              Ranger from 1993 until 2001.
             </p>
-            <p class="text-center mt-5">
+            <p class="text-left mt-5 px-10">
               He was twice a New York Times bestselling author, first with his
               book on his personal philosophy of positive force and the
               psychology of self-improvement based on personal anecdotes called
@@ -64,10 +56,10 @@ const About = () => {
             </p>
           </div>
           <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInLeft rounded-xl">
-            <h1 className="text-3xl text-center underline mb-6">
+            <h1 className="text-6xl text-center underline mb-16 pt-8">
               Action Movies
             </h1>
-            <p class="text-center">
+            <p class="text-left px-10">
               Carlos Ray "Chuck" Norris (born March 10, 1940) is an American
               martial artist, actor, film producer, and screenwriter. After
               serving in the United States Air Force, Norris won many martial
@@ -92,7 +84,7 @@ const About = () => {
               with Missing in Action (1984), which proved to be very successful
               and launched a trilogy.
             </p>
-            <p class="text-center mt-5">
+            <p class="text-left mt-5 px-10">
               Norris started to work almost exclusively on high-profile action
               films with Cannon, becoming their leading star during the 1980s.
               Films with Cannon included Invasion U.S.A (1985), The Delta Force
@@ -114,7 +106,7 @@ const About = () => {
               className="sm:h-full w-full object-cover rounded-xl"
             />
           </div>
-          <div class=" animate__animated animate__bounceInLeft ">
+          <div class="animate__animated animate__bounceInLeft ">
             <img
               src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/03/10/5fa908e2329b4.jpeg"
               alt=""
@@ -122,8 +114,10 @@ const About = () => {
             />
           </div>
           <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight rounded-xl">
-            <h1 className="text-3xl text-center underline mb-6">Philantropy</h1>
-            <p class="text-center">
+            <h1 className="text-6xl text-center underline mb-10 pt-8">
+              Philantropy
+            </h1>
+            <p class="text-left px-10">
               In 1979, Norris starred in A Force of One, where he played Matt
               Logan, a world karate champion who assists the police in their
               investigation. The film was developed while touring for Good Guys
@@ -145,7 +139,7 @@ const About = () => {
               unhappy with the direction they wanted to take with him, hence the
               contract was canceled.
             </p>
-            <p class="text-center mt-5">
+            <p class="text-left mt-5 px-10 ">
               In 1983, Norris made Lone Wolf McQuade with Orion Pictures. He
               played J.J. McQuade, a reckless Texas Ranger who'd rather work
               alone but who gets a new partner because his captain would like to
