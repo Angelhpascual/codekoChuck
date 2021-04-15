@@ -1,8 +1,10 @@
 import React from "react";
 import chuckImg from "../../assets/images/chuck.jpg";
+import animate from "animate.css";
+
 const ChuckJokeCard = ({ category, joke, handleDelete }) => {
   return (
-    <div className="max-w-md py-4 px-8 bg-yellow-500 shadow-lg rounded-lg my-20">
+    <div className="max-w-md py-4 px-8 bg-yellow-500 shadow-lg rounded-lg my-20 animate__animated animate__fadeIn">
       <div className="flex justify-center items-center md:justify-end  -mt-16">
         <img
           className="w-20 h-20 object-cover rounded-full border-2 border-yellow-500 "
@@ -11,21 +13,21 @@ const ChuckJokeCard = ({ category, joke, handleDelete }) => {
         />
       </div>
       <div>
-        <h2 className="text-gray-800 text-2xl font-semibold mb-3 capitalize">
+        <h2 className="text-yellow-800 text-2xl font-semibold mb-3 capitalize">
           Category: {category}
         </h2>
         <q className="mt-2 text-gray-600">{joke}</q>
       </div>
       <div className="flex justify-between mt-4">
-        <div className="text-xl font-bold text-yellow-100">Chuck Norris</div>
+        <div className="text-xl font-bold text-yellow-200">Chuck Norris</div>
         <div className="flex justify-end ">
-          <button onClick={() => handleDelete(joke.id)}>
+          <button className="" onClick={() => handleDelete(joke.id)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="chocolate"
             >
               <path
                 strokeLinecap="round"

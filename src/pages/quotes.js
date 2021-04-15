@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ChuckJokeCard from "../components/ChuckJokeCard/ChuckJokeCard";
 import chuckCartoon from "../assets/images/chucknorriscartoon.png";
+import animate from "animate.css";
+
 const Quotes = () => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
@@ -23,6 +25,20 @@ const Quotes = () => {
   }, [setCategories]);
 
   /**
+   * *Set LocalStorage
+   */
+  useEffect(() => {
+    setCategoryQuote(JSON.parse(localStorage.getItem("jokes") || []));
+  }, []);
+
+  /**
+   * *Get LocalStoragecod
+   */
+  useEffect(() => {
+    localStorage.setItem("jokes", JSON.stringify(categoryQuote));
+  }, [categoryQuote]);
+
+  /**
    *
    * *Function for getting a joke from a category
    * *params : category
@@ -40,19 +56,24 @@ const Quotes = () => {
 
   /**
    * *Delete Function
+   * *params: categoryQuote
    */
   const handleDelete = (id) => {
-    const removeFacts = categoryQuote.filter((joke) => joke.id !== id);
-    setCategoryQuote(removeFacts);
+    const newJokes = categoryQuote.filter((joke) => joke.id !== id);
+    setCategoryQuote(newJokes);
   };
   return (
     <div className=" bg-yellow-500">
       <h1 className="lg:text-7xl md:text-5xl sm:text-3xl text-center pt-16 flex flex-col items-center font-mono underline">
         Chuck Norris Quotes
-        <img src={chuckCartoon} alt="chuckIcon" className="h-44 w-44 mt-8" />
+        <img
+          src={chuckCartoon}
+          alt="chuckIcon"
+          className="h-44 w-44 mt-8 animate__animated animate__bounceIn animate__slower "
+        />
       </h1>
       <div className="grid grid-cols-1 gap-4 container mx-auto pt-12">
-        <div className="bg-yellow-600  text-center">
+        <div className="bg-yellow-600 rounded-xl text-center">
           <div className="grid grid-cols-4 gap-4 p-4">
             {loading ? (
               <div className="fixed top-0 right-0 h-screen w-screen z-50 flex justify-center items-center bg-gray-500 bg-opacity-50">
@@ -64,7 +85,7 @@ const Quotes = () => {
                   key={index}
                   onClick={() => getJokeCategory(category)}
                   value={category}
-                  className="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-3 text-xs sm:text-xl rounded uppercase"
+                  className="bg-yellow-300 hover:bg-yellow-400 text-yellow-800 font-bold py-3 text-xs sm:text-xl rounded uppercase"
                 >
                   {category}
                 </button>
@@ -72,7 +93,7 @@ const Quotes = () => {
             )}
           </div>
         </div>
-        <div className="bg-yellow-600 rounded-lg h-auto flex flex-col items-center text-2xl p-12 mb-20 font-mono overflow-auto ">
+        <div className="bg-yellow-600 rounded-lg h-auto flex flex-col items-center text-2xl p-12 mb-20 font-mono overflow-hidden ">
           {categoryQuote.length > 0 ? (
             categoryQuote.map((joke, index) => (
               <ChuckJokeCard

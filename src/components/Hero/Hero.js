@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className="bg-yellow-500 h-screen flex flex-col justify-center items-center">
       <img className="mb-6 rounded-full" src={chuckNorrisGuns} alt="Chucky" />
-      <h1 className="lg:text-8xl md:text-7xl sm:text-5xl text-3xl font-black mb-14">
+      <h1 className="lg:text-8xl md:text-7xl sm:text-5xl text-3xl font-black mb-14 ">
         Chuck Norris CodeKo
       </h1>
       <Link
