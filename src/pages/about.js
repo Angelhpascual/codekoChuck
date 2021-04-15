@@ -16,7 +16,7 @@ const About = () => {
             />
           </div>
           <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight ">
-            <h1 className="text-2xl text-center underline mb-6">Early Life</h1>
+            <h1 className="text-3xl  text-center underline mb-6">Early Life</h1>
             <p class="text-center">
               Norris would go on to star in a streak of bankable
               independently-made action and martial arts films, with A Force of
@@ -64,7 +64,9 @@ const About = () => {
             </p>
           </div>
           <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInLeft">
-            <h1 className="text-2xl text-center underline mb-6">Early Life</h1>
+            <h1 className="text-3xl text-center underline mb-6">
+              Action Movies
+            </h1>
             <p class="text-center">
               Carlos Ray "Chuck" Norris (born March 10, 1940) is an American
               martial artist, actor, film producer, and screenwriter. After
@@ -120,7 +122,7 @@ const About = () => {
             />
           </div>
           <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight">
-            <h1 className="text-2xl text-center underline mb-6">Early Life</h1>
+            <h1 className="text-3xl text-center underline mb-6">Philantropy</h1>
             <p class="text-center">
               In 1979, Norris starred in A Force of One, where he played Matt
               Logan, a world karate champion who assists the police in their
