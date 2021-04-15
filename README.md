@@ -2,7 +2,7 @@
 
 Chuck Norris web it's a small project that has been built with React 17, Tailwind, Axios, Animation.css, HeroIcons for a technical test.
 
-APP Preview: [APP hosted by Vercel](https://codeko-chuck-gijq5ttfg-angelhpascual.vercel.app/quotes)
+APP Preview: [APP hosted by Vercel](https://codeko-chuck-gijq5ttfg-angelhpascual.vercel.app/)
 
 ## Installation
 
