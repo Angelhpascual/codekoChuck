@@ -2,20 +2,20 @@ import React from "react";
 import animate from "animate.css";
 const About = () => {
   return (
-    <div className="bg-yellow-500 ">
+    <div className="bg-yellow-500">
       <div className="container mx-auto text-center">
-        <div className="grid grid-rows-3 grid-cols-1 sm:grid-cols-3 gap-4 py-16 justify-center">
+        <div className="grid grid-rows-3 justify-center  grid-cols-1 sm:grid-cols-1 md:grid-cols-3  gap-4 py-16  ">
           <div
             style={animate}
-            class="bg-yellow-400 animate__animated animate__bounceInLeft "
+            class=" animate__animated animate__bounceInLeft "
           >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/3/30/Chuck_Norris_May_2015.jpg"
               alt=""
-              className="sm:h-full w-full object-cover"
+              className="sm:w-full w-full object-cover rounded-xl"
             />
           </div>
-          <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight ">
+          <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight rounded-xl ">
             <h1 className="text-3xl  text-center underline mb-6">Early Life</h1>
             <p class="text-center">
               Norris would go on to star in a streak of bankable
@@ -63,7 +63,7 @@ const About = () => {
               Conan O'Brien where he read the facts or participated in sketches.
             </p>
           </div>
-          <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInLeft">
+          <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInLeft rounded-xl">
             <h1 className="text-3xl text-center underline mb-6">
               Action Movies
             </h1>
@@ -107,21 +107,21 @@ const About = () => {
               Sylvester Stallone's The Expendables 2 (2012).
             </p>
           </div>
-          <div class="bg-yellow-400 animate__animated animate__bounceInRight ">
+          <div class=" animate__animated animate__bounceInRight ">
             <img
               src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2020/03/10/5fa90778dce37.jpeg"
               alt=""
-              className="sm:h-full w-full object-cover"
+              className="sm:h-full w-full object-cover rounded-xl"
             />
           </div>
-          <div class="bg-yellow-400 animate__animated animate__bounceInLeft">
+          <div class="bg-yellow-400 animate__animated animate__bounceInLeft ">
             <img
               src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/03/10/5fa908e2329b4.jpeg"
               alt=""
-              className="sm:h-full w-full object-cover"
+              className="sm:h-full w-full object-cover rounded-xl"
             />
           </div>
-          <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight">
+          <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight rounded-xl">
             <h1 className="text-3xl text-center underline mb-6">Philantropy</h1>
             <p class="text-center">
               In 1979, Norris starred in A Force of One, where he played Matt
