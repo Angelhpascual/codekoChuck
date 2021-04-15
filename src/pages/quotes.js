@@ -25,14 +25,14 @@ const Quotes = () => {
   }, [setCategories]);
 
   /**
-   * *Set LocalStorage
+   * *Set LocalStorage[]
    */
   useEffect(() => {
     setCategoryQuote(JSON.parse(localStorage.getItem("jokes") || []));
   }, []);
 
   /**
-   * *Get LocalStoragecod
+   * *Get LocalStorage[]
    */
   useEffect(() => {
     localStorage.setItem("jokes", JSON.stringify(categoryQuote));
@@ -56,7 +56,7 @@ const Quotes = () => {
 
   /**
    * *Delete Function
-   * *params: categoryQuote
+   * *params: categoryQuote.id
    */
   const handleDelete = (id) => {
     const newJokes = categoryQuote.filter((joke) => joke.id !== id);
