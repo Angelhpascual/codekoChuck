@@ -62,6 +62,10 @@ const Quotes = () => {
     const newJokes = categoryQuote.filter((joke) => joke.id !== id);
     setCategoryQuote(newJokes);
   };
+
+  const handleDeleteAll = (id) => {
+    setCategoryQuote([]);
+  };
   return (
     <div className=" bg-yellow-500">
       <h1 className="lg:text-7xl md:text-5xl sm:text-3xl text-center pt-16 flex flex-col items-center font-mono underline">
@@ -93,6 +97,16 @@ const Quotes = () => {
             )}
           </div>
         </div>
+        {categoryQuote.length > 0 ? (
+          <div className="flex justify-center">
+            <button
+              onClick={() => handleDeleteAll()}
+              className="mr-1 text-yellow-800 bg-yellow-400 hover:bg-yellow-300 py-2 px-4 rounded-xl font-bold"
+            >
+              Delete All
+            </button>
+          </div>
+        ) : null}
         <div className="bg-yellow-600 rounded-lg h-auto flex flex-col items-center text-2xl p-12 mb-20 font-mono overflow-hidden ">
           {categoryQuote.length > 0 ? (
             categoryQuote.map((joke, index) => (
