@@ -47,6 +47,7 @@ const Quotes = () => {
     axios
       .get(`https://api.chucknorris.io/jokes/random?category=${category}`)
       .then((response) => {
+        console.log(categoryQuote);
         setCategoryQuote([response.data, ...categoryQuote]);
       })
       .catch((error) => {
