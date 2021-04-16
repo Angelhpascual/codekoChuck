@@ -7,6 +7,7 @@ const Quotes = () => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([]);
   const [categoryQuote, setCategoryQuote] = useState([]);
+
   /**
    * *Getting the categories
    */
@@ -24,18 +25,20 @@ const Quotes = () => {
   }, [setCategories]);
 
   /**
-   * *Set LocalStorage[]
-   */
-  useEffect(() => {
-    localStorage.setItem("jokes", JSON.stringify(categoryQuote));
-  }, [categoryQuote]);
-
-  /**
    * *Get LocalStorage[]
    */
   useEffect(() => {
-    setCategoryQuote(JSON.parse(localStorage.getItem("jokes")));
+    console.log("Hey");
+    setCategoryQuote(JSON.parse(localStorage.getItem("jokes") || []));
   }, []);
+
+  /**
+   * *Set LocalStorage[]
+   */
+  useEffect(() => {
+    console.log("Ho");
+    localStorage.setItem("jokes", JSON.stringify(categoryQuote));
+  }, [categoryQuote]);
 
   /**
    *
