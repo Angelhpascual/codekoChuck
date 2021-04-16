@@ -8,12 +8,12 @@ const About = () => {
         <div className="grid grid-rows-3 justify-center  grid-cols-1 sm:grid-cols-1 md:grid-cols-3  gap-4 py-16  ">
           <div
             style={animate}
-            class=" animate__animated animate__bounceInLeft "
+            className="sm:col-span-1  text-left animate__animated animate__bounceInLeft "
           >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/3/30/Chuck_Norris_May_2015.jpg"
               alt=""
-              className="sm:w-full w-full object-cover rounded-xl"
+              className="sm:w-full h-full object-contain rounded-xl"
             />
           </div>
           <div class="bg-yellow-400 sm:col-span-2 p-5 text-left animate__animated animate__bounceInRight rounded-xl ">
