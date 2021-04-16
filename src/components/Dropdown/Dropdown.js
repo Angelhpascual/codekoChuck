@@ -5,12 +5,12 @@ const Dropdown = ({ isOpen, toggle }) => {
     <div
       className={
         isOpen
-          ? "grid grid-rows-4 text-center items-center bg-yellow-400 divide-y-2"
+          ? "grid grid-rows-4 text-center md:hidden items-center transform duration-300 ease-in-out bg-yellow-400 divide-y-2"
           : "hidden"
       }
       onClick={toggle}
     >
-      <Link className="p-4 text-yellow-800" to="/">
+      <Link className="p-4 text-yellow-800 " to="/">
         Home
       </Link>
       <Link className="p-4 text-yellow-800" to="/about">
